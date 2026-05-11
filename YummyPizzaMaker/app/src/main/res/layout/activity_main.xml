@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pizza_bg" />
+
+    <ImageView
+        android:id="@+id/title_logo"
+        android:layout_width="388dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="52dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/title" />
+
+    <ImageView
+        android:id="@+id/output_bg"
+        android:layout_width="378dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btn_panel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_logo"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/output_bg" />
+
+    <LinearLayout
+        android:id="@+id/icon_display_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/output_bg"
+        app:layout_constraintBottom_toBottomOf="@id/output_bg"
+        app:layout_constraintStart_toStartOf="@id/output_bg"
+        app:layout_constraintEnd_toEndOf="@id/output_bg">
+
+        <ImageView
+            android:id="@+id/img_dough_display"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_sauce_display"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_topping_display"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_panel"
+        android:layout_width="380dp"
+        android:layout_height="414dp"
+        android:layout_marginBottom="56dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_bg" />
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Ingredients!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/output_bg"
+        app:layout_constraintEnd_toEndOf="@id/output_bg"
+        app:layout_constraintStart_toStartOf="@id/output_bg"
+        android:layout_marginBottom="10dp" />
+
+    <ImageButton
+        android:id="@+id/btn_circle"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="452dp"
+        app:srcCompat="@drawable/dough_circle" />
+
+    <ImageButton
+        android:id="@+id/btn_heart"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="452dp"
+        app:srcCompat="@drawable/dough_heart" />
+
+    <ImageButton
+        android:id="@+id/btn_square"
+        android:layout_width="104dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="452dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dough_square" />
+
+    <ImageButton
+        android:id="@+id/btn_rect"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="452dp"
+        app:srcCompat="@drawable/dough_rect" />
+
+    <ImageButton
+        android:id="@+id/btn_red"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="539dp"
+        app:srcCompat="@drawable/sauce_red" />
+
+    <ImageButton
+        android:id="@+id/btn_pesto"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="539dp"
+        app:srcCompat="@drawable/sauce_pesto" />
+
+    <ImageButton
+        android:id="@+id/btn_aioli"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="539dp"
+        app:srcCompat="@drawable/sauce_aioli" />
+
+    <ImageButton
+        android:id="@+id/btn_bbq"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="539dp"
+        app:srcCompat="@drawable/sauce_bbq" />
+
+    <ImageButton
+        android:id="@+id/btn_pep"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="628dp"
+        android:backgroundTint="#00000000"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_pep" />
+
+    <ImageButton
+        android:id="@+id/btn_mush"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="628dp"
+        app:srcCompat="@drawable/top_mush" />
+
+    <ImageButton
+        android:id="@+id/btn_olive"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="628dp"
+        app:srcCompat="@drawable/top_olive" />
+
+    <ImageButton
+        android:id="@+id/btn_onion"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="628dp"
+        app:srcCompat="@drawable/top_onion" />
+
+    <ImageButton
+        android:id="@+id/btn_bake"
+        android:layout_width="179dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_panel"
+        app:layout_constraintStart_toStartOf="@+id/btn_panel"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pep"
+        app:srcCompat="@drawable/btn_bake" />
+
+    <ImageButton
+        android:id="@+id/btn_random"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_onion"
+        app:srcCompat="@drawable/btn_random" />
+
+    <ImageButton
+        android:id="@+id/btn_clear"
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/btn_bake"
+        app:layout_constraintTop_toBottomOf="@+id/btn_olive"
+        app:srcCompat="@drawable/btn_clear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
