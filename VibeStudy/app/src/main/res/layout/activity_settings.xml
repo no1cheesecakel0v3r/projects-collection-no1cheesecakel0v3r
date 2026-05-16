@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_splash_gradient">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Profile"
+        android:textSize="32sp"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#F0FFF0"
+        android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:id="@+id/edit_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Name"
+        android:textColorHint="#80F0FFF0"
+        android:textColor="#F0FFF0"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/edit_occupation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Occupation (e.g., Student, Designer)"
+        android:textColorHint="#80F0FFF0"
+        android:textColor="#F0FFF0"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btn_save_prefs"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="SAVE PROFILE"
+        android:backgroundTint="#F0FFF0"
+        android:textColor="#121212"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing="0.1" />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@drawable/bg_splash_gradient">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABOUT STUDYVIBES"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-thin"
+        android:letterSpacing="0.2"
+        android:textColor="#F0FFF0"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="An aesthetic ambient workspace tailored to help you maintain cognitive focus."
+        android:textColor="#B2DFDB"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOW TO USE\n\n1. Watch your constellation form\n2. Configure your personal profile details\n3. Set study targets and build concentration"
+        android:lineSpacingExtra="12dp"
+        android:textColor="#E0F2F1"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light" />
+
+    <Button
+        android:id="@+id/btn_okay"
+        android:layout_width="220dp"
+        android:layout_height="54dp"
+        android:text="CONTINUE "
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#424242"
+        android:textColor="#F0FFF0"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing="0.1"
+        android:drawableEnd="@android:drawable/btn_star_big_on"
+        android:drawableTint="#F0FFF0"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"/>
+
+</LinearLayout>

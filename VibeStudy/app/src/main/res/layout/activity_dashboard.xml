@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dashboard_active"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/constellation_view"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/constellation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_open_settings"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Settings Hub"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dashboard_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Greetings from the stars!"
+        android:textColor="#F0FFF0"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constellation_view" />
+
+    <LinearLayout
+        android:id="@+id/timer_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#1AF0FFF0"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_greeting">
+
+        <TextView
+            android:id="@+id/tv_timer_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:25:00"
+            android:textColor="#F0FFF0"
+            android:textSize="54sp"
+            android:fontFamily="sans-serif-thin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="slide display to alter duration"
+            android:textColor="#80F0FFF0"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.1" />
+
+        <ImageButton
+            android:id="@+id/btn_timer_control"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_play"
+            app:tint="#F0FFF0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/task_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="#1AF0FFF0"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer_box">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:text="Things to Do" android:textColor="#F0FFF0"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-light"
+                android:letterSpacing="0.05" />
+
+            <Button
+                android:id="@+id/btn_add_task"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="#424242"
+                android:text="Add +"
+                android:textColor="#F0FFF0"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/dynamic_tasks_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
